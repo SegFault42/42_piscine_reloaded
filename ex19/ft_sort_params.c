@@ -1,11 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabougue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/24 18:55:07 by rabougue          #+#    #+#             */
+/*   Updated: 2016/05/04 09:16:38 by rabougue         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int	i;
 
@@ -15,7 +24,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
@@ -45,7 +54,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	char	*tmp;
 	int		find;
@@ -57,7 +66,6 @@ int	main(int argc, char **argv)
 		find = 0;
 		i = 0;
 		while (++i < argc - 1)
-		{
 			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 			{
 				tmp = argv[i];
@@ -65,7 +73,6 @@ int	main(int argc, char **argv)
 				argv[i + 1] = tmp;
 				find = 1;
 			}
-		}
 	}
 	i = 0;
 	while (++i < argc)
