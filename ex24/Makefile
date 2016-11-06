@@ -22,7 +22,7 @@ INC = includes/
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRCS) -I $(INC)
+	gcc -Wall -Wextra -Werror -c $(SRCS) -I $(INC)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
