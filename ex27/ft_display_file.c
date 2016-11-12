@@ -1,5 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rabougue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/12 14:26:51 by rabougue          #+#    #+#             */
+/*   Updated: 2016/11/12 17:39:06 by rabougue         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <fcntl.h>
+
+#define BUFF_SIZE 10
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -23,9 +37,9 @@ void	ft_putstr_fd(char *str, int fd)
 
 int		main(int argc, char **argv)
 {
-	int	fd;
-	int	ret;
-	char	buff[2];
+	int		fd;
+	int		ret;
+	char	buff[BUFF_SIZE + 1];
 
 	if (argc == 1)
 		ft_putstr_fd("File name missing.\n", 2);
@@ -34,9 +48,9 @@ int		main(int argc, char **argv)
 	else
 	{
 		fd = open(argv[1], O_RDONLY);
-		while ((ret = read(fd, buff, 1)) > 0)
+		while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
 		{
-			buff[1] = '\0';
+			buff[ret] = '\0';
 			ft_putstr_fd(buff, 1);
 		}
 	}

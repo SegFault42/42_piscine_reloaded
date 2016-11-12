@@ -6,13 +6,14 @@
 /*   By: rabougue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 19:21:22 by rabougue          #+#    #+#             */
-/*   Updated: 2016/09/23 22:19:24 by rabougue         ###   ########.fr       */
+/*   Updated: 2016/11/12 17:38:27 by rabougue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
-typedef struct s_point
+typedef struct	s_point
 {
 	int			x;
 	int			y;

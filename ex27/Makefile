@@ -6,7 +6,7 @@
 #    By: rabougue <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/10 19:16:51 by rabougue          #+#    #+#              #
-#    Updated: 2016/04/06 13:45:58 by rabougue         ###   ########.fr        #
+#    Updated: 2016/11/12 14:26:08 by rabougue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJS = ./ft_display_file.o
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJS)
 	gcc -Wall -Wextra -Werror -c $(SRCS)
 	gcc -o $(NAME) $(OBJS)
 
