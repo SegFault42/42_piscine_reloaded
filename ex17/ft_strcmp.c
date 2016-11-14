@@ -6,7 +6,7 @@
 /*   By: rabougue <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 18:55:07 by rabougue          #+#    #+#             */
-/*   Updated: 2016/05/04 09:16:38 by rabougue         ###   ########.fr       */
+/*   Updated: 2016/11/14 10:05:49 by rabougue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,6 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	if (ft_strlen(s1) > ft_strlen(s2))
-		return (1);
-	else if (ft_strlen(s1) < ft_strlen(s2))
-		return (-1);
 	while (s1[i] != '\0')
 	{
 		if (s2[i] != s1[i])
