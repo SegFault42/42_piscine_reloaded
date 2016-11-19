@@ -1,1 +1,1 @@
-ls -Ra | grep '.*[.]sh$' | rev | cut -c 4- | rev
+find . -type f -name "*.sh" -print | sed 's/.*\///g' | sed 's/\.sh//g'
